@@ -1,0 +1,27 @@
+{
+  "name": "csgoreader-node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
+    "start": "tsc && "
+  },
+  "dependencies": {
+    "ansi-styles": "^3.2.1",
+    "csgodemoreader": "~1.0.2",
+    "debug": "~2.6.9",
+    "demofile": "^1.0.2",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0",
+    "typescript-require": "^0.2.10"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.19",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "ts-node": "^8.0.2",
+    "typings": "^2.1.1"
+  }
+}

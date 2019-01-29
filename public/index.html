@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSGO demo reader</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+  <ul id="example-1">
+    <li v-for="item in demoFiles">
+      {{ item }}
+    </li>
+  </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script src="csgoreader.js"></script>
+<script src="cs_vue.js"></script>
+</body>
+</html>
