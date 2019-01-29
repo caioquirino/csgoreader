@@ -16,6 +16,11 @@ class CsgoDemoReader {
       ev("player_death", e);
     });
 
+    this._demoFile.on("end", e => {
+      ev("end_demo", e);
+
+      console.log("Finished.");
+    });
 
     this._demoFile.parse(this._buffer);
     console.log("STARTED")

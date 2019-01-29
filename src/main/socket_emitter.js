@@ -23,10 +23,10 @@ function emitter(socketio) {
             socketio.emit('listDemoFiles', listDemoFiles().filter((x) => x.endsWith(".dem")))
         });
 
-        socket.on('playDemo', function(payload) {
-            console.log('playDemo');
+        socket.on('start', function(payload) {
+            console.log('start');
             demo.start(payload)
-            socketio.emit('playDemo', true)
+            socketio.emit('start', true)
         });
     });
 

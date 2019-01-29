@@ -9,7 +9,7 @@
 <div id="app">
   <ul id="example-1">
     <li v-for="item in demoFiles">
-      {{ item }}
+      <button v-on:click='start(item)' :disabled="running">{{ item }}</button>
     </li>
   </ul>
 </div>

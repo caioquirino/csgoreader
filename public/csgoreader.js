@@ -8,6 +8,9 @@ const registerListener = (listener) => {
   socket.on('player_death', (msg) => {
     listener('player_death', msg)
   })
+  socket.on('end_demo', (msg) => {
+    listener('end_demo', msg)
+  })
 }
 
 
@@ -16,7 +19,8 @@ const csgoreader = {
     add: (listener) => registerListener(listener)
   },
   commands: {
-    listDemoFiles: () => socket.emit('listDemoFiles', '')
+    listDemoFiles: () => socket.emit('listDemoFiles', ''),
+    start: (file) => socket.emit('start', file)
   }
 
 }
