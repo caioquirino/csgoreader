@@ -7,9 +7,16 @@
 <body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <div id="app">
+  Demo files
   <ul id="example-1">
     <li v-for="item in demoFiles">
       <button v-on:click='start(item)' :disabled="running">{{ item }}</button>
+    </li>
+  </ul>
+  Players
+  <ul id="example-2">
+    <li v-for="item in players">
+      {{ item.name }} - {{item.steamId}}
     </li>
   </ul>
 </div>

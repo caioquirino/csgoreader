@@ -11,8 +11,8 @@ function emitter(socketio) {
         console.log('a user connected');
 
         const eventListener = (ev, payload) => {
-            socketio.emit(ev, payload)
             console.log(`EVENT=${ev}, PAYLOAD=${JSON.stringify(payload)}`)
+            socketio.emit(ev, payload)
         }
 
         const demo = new CsgoDemoReader(eventListener)

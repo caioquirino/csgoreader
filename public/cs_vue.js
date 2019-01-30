@@ -15,11 +15,15 @@ const app = new Vue({
         if(event === 'end_demo') {
           this.running = false;
         }
+        if(event === 'player_joined') {
+          this.players = this.players.concat([payload]);
+        }
       }
       csgoreader.listener.add(listener);
       csgoreader.commands.listDemoFiles();
     },
     start(file) {
+      this.players = [];
       this.running = true;
       csgoreader.commands.start(file);
     }
